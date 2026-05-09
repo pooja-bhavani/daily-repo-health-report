@@ -75,7 +75,13 @@ environment:
           path: /tmp/kestra-wd/tmp
       url: http://localhost:8080/
 ```
+---
 
+## Flows
+
+Every journey begins with a Flow. A flow is your workflow's container — it holds all the tasks you want to execute and defines how they work together. Think of it as a recipe: it lists the ingredients (tasks) and the steps to follow (orchestration logic).
+
+Flows can be created through the Flow Editor using YAML, No-code Editor as well as with the AI Copilot.
 <img width="1470" height="800" alt="image" src="https://github.com/user-attachments/assets/d5dc3e51-8e81-486f-b102-53dd0bd071c1" />
 
 <img width="1470" height="805" alt="image" src="https://github.com/user-attachments/assets/aa1ec993-8e58-428a-9d4c-79bb026c00b2" />
