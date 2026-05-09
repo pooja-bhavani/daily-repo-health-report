@@ -8,7 +8,7 @@
 
 ## Overview
 
-The Repository Health Analyzer is an advanced DevOps automation project built using Kestra
+The Repository Health Analyzer is an advanced DevOps automation project built using Kestra+Grof
  that continuously analyzes GitHub repositories and generates intelligent DevOps health reports.
 
 This project demonstrates how modern workflow orchestration can automate:
