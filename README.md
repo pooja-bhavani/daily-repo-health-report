@@ -15,7 +15,36 @@ Infrastructure analysis
 CI/CD inspection
 Markdown & HTML dashboard generation
 
-What is Kestra?
+## Project Strucutre
+
+                    +----------------------+
+                    |   GitHub Repository  |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |   Kestra Workflow    |
+                    +----------+-----------+
+                               |
+          +--------------------+--------------------+
+          |                    |                    |
+          v                    v                    v
++----------------+   +----------------+   +----------------+
+| Security Scan  |   | Docker Checks |   | Repo Analysis  |
++----------------+   +----------------+   +----------------+
+          |                    |                    |
+          +--------------------+--------------------+
+                               |
+                               v
+                    +----------------------+
+                    | Dashboard Generator  |
+                    +----------------------+
+                               |
+                               v
+                    +----------------------+
+                    | Markdown + HTML UI   |
+                    +----------------------+
+## What is Kestra?
 
 [Kestra official docs](https://academy.kestra.io/view/courses/kestra-fundamentals/3492611-introduction/11404080-what-is-kestra) 
 
