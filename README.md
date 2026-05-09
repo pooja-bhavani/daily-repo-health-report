@@ -38,3 +38,40 @@ https://raw.githubusercontent.com/kestra-io/kestra/develop/docker-compose.yml
 ```
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kestra-io/kestra/develop/docker-compose.yml" -OutFile "docker-compose.yml"
 ```
+
+4. Once the file is downloaded, you can start Kestra with the following command:
+```
+docker compose up -d
+```
+
+<img width="1469" height="802" alt="image" src="https://github.com/user-attachments/assets/faaf7335-94e5-4e77-b77f-cfafe253ba63" />
+
+## Configure Kestra
+Inside of your docker-compose.yml file, there is an environment variable called KESTRA_CONFIGURATION . This is where we can configure our Kestra environment.
+```
+environment:
+  KESTRA_CONFIGURATION: |
+    datasources:
+      postgres:
+        url: jdbc:postgresql://postgres:5432/kestra
+        driverClassName: org.postgresql.Driver
+        username: kestra
+        password: k3str4
+    kestra:
+      # server:
+      #   basic-auth:
+      #     username: admin@kestra.io # it must be a valid email address
+      #     password: Admin1234! # it must be at least 8 characters long with uppercase letter and a number
+      repository:
+        type: postgres
+      storage:
+        type: local
+        local:
+          base-path: "/app/storage"
+      queue:
+        type: postgres
+      tasks:
+        tmp-dir:
+          path: /tmp/kestra-wd/tmp
+      url: http://localhost:8080/
+```
