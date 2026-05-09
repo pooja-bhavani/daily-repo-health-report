@@ -1,0 +1,74 @@
+id: github-ci-cd-demo
+namespace: company.team
+description: >
+  Fetches daily GitHub repo stats, generates AI summary using Groq, and logs everything. Runs every day at 9AM.
+
+tasks:
+
+  - id: fetch_repo_stats
+    type: io.kestra.plugin.core.http.Request
+    method: GET
+    uri: https://api.github.com/repos/pooja-bhavani/daily-repo-health-report
+    headers:
+      Authorization: "Bearer {{ secret('GITHUB_TOKEN') }}"
+      Accept: application/vnd.github+json
+
+  - id: fetch_open_issues
+    type: io.kestra.plugin.core.http.Request
+    method: GET
+    uri: https://api.github.com/repos/pooja-bhavani/daily-repo-health-report/issues?state=open&per_page=5
+    headers:
+      Authorization: "Bearer {{ secret('GITHUB_TOKEN') }}"
+      Accept: application/vnd.github+json
+
+  - id: fetch_open_prs
+    type: io.kestra.plugin.core.http.Request
+    method: GET
+    uri: https://api.github.com/repos/pooja-bhavani/daily-repo-health-report/pulls?state=open&per_page=5
+    headers:
+      Authorization: "Bearer {{ secret('GITHUB_TOKEN') }}"
+      Accept: application/vnd.github+json
+
+  - id: generate_ai_summary
+    type: io.kestra.plugin.core.http.Request
+    method: POST
+    uri: https://api.groq.com/openai/v1/chat/completions
+    headers:
+      Authorization: "Bearer {{ secret('GROQ_API_KEY') }}"
+      Content-Type: application/json
+    body: >
+      {
+        "model": "llama-3.1-8b-instant",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful assistant that writes short, friendly, motivating daily repo health summaries for developers. Keep it under 3 sentences. Be encouraging and specific."
+          },
+          {
+            "role": "user",
+            "content": {{ ("Repo: daily-repo-health-report by pooja-bhavani\nStats: " ~ outputs.fetch_repo_stats.body) | json }}
+          }
+        ]
+      }
+
+finally:
+  - id: log_summary
+    type: io.kestra.plugin.core.log.Log
+    message: |
+      ================================
+      📊 DAILY REPO HEALTH REPORT
+      ================================
+      Date  : {{ now() | date('MMM dd, yyyy') }}
+      Repo  : pooja-bhavani/daily-repo-health-report
+      --------------------------------
+      Stats   : ✅ Fetched
+      Issues  : ✅ Fetched
+      PRs     : ✅ Fetched
+      AI      : ✅ Generated
+      ================================
+
+triggers:
+  - id: daily_schedule
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 9 * * *"
+    description: Runs every day at 9:00 AM
