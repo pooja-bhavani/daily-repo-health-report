@@ -1,5 +1,11 @@
 # Intelligent Repository Health Analyzer using Kestra
 
+![Kestra](https://img.shields.io/badge/Kestra-Orchestration-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-Automated-success)
+![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ## Overview
 
 The Repository Health Analyzer is an advanced DevOps automation project built using Kestra
@@ -119,3 +125,4 @@ Flows can be created through the Flow Editor using YAML, No-code Editor as well 
 <img width="1470" height="800" alt="image" src="https://github.com/user-attachments/assets/d5dc3e51-8e81-486f-b102-53dd0bd071c1" />
 
 <img width="1470" height="805" alt="image" src="https://github.com/user-attachments/assets/aa1ec993-8e58-428a-9d4c-79bb026c00b2" />
+
