@@ -46,6 +46,7 @@ Markdown & HTML dashboard generation
                     | Markdown + HTML UI   |
                     +----------------------+
 ```
+
 ## What is Kestra?
 
 [Kestra official docs](https://academy.kestra.io/view/courses/kestra-fundamentals/3492611-introduction/11404080-what-is-kestra) 
