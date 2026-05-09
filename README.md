@@ -17,6 +17,9 @@ Markdown & HTML dashboard generation
 
 ## Project Strucutre
 
+
+<div align="center">
+
 ```text
                     +----------------------+
                     |   GitHub Repository  |
@@ -46,6 +49,8 @@ Markdown & HTML dashboard generation
                     | Markdown + HTML UI   |
                     +----------------------+
 ```
+
+</div>
 
 ## What is Kestra?
 
