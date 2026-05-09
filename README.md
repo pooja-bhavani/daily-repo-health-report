@@ -17,4 +17,4 @@ Markdown & HTML dashboard generation
 
 What is Kestra?
 
-[!What is Kestra](https://academy.kestra.io/view/courses/kestra-fundamentals/3492611-introduction/11404080-what-is-kestra)
+[What is Kestra](https://academy.kestra.io/view/courses/kestra-fundamentals/3492611-introduction/11404080-what-is-kestra)
