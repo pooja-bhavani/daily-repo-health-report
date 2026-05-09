@@ -123,6 +123,13 @@ Every journey begins with a Flow. A flow is your workflow's container — it hol
 
 Flows can be created through the Flow Editor using YAML, No-code Editor as well as with the AI Copilot.
 <img width="1470" height="800" alt="image" src="https://github.com/user-attachments/assets/d5dc3e51-8e81-486f-b102-53dd0bd071c1" />
+---
 
-<img width="1470" height="805" alt="image" src="https://github.com/user-attachments/assets/aa1ec993-8e58-428a-9d4c-79bb026c00b2" />
+## Tasks
+
+This is where the real work happens. Tasks are the individual steps within your flow — each one performs a discrete action. Tasks are incredibly versatile: they can send HTTP requests, run code in various languages, query databases, transform data, send notifications, and much more.
+
+<img width="1469" height="804" alt="image" src="https://github.com/user-attachments/assets/497091d2-bc99-422f-8a6a-0b239ecd8226" />
+
+<img width="1465" height="803" alt="image" src="https://github.com/user-attachments/assets/9d49f1d6-49c3-432d-b112-f8fa0a62b91d" />
 
