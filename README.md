@@ -75,3 +75,7 @@ environment:
           path: /tmp/kestra-wd/tmp
       url: http://localhost:8080/
 ```
+
+<img width="1470" height="800" alt="image" src="https://github.com/user-attachments/assets/d5dc3e51-8e81-486f-b102-53dd0bd071c1" />
+
+<img width="1470" height="805" alt="image" src="https://github.com/user-attachments/assets/aa1ec993-8e58-428a-9d4c-79bb026c00b2" />
