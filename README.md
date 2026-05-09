@@ -24,3 +24,17 @@ Kestra is an open-source orchestration platform built to handle workflows of any
 Unlike tools that are built for a single use case and fall short outside that area, Kestra gives you flexibility. You can build workflows with code (YAML), visually with a no-code editor, or even with the AI Copilot that writes your flows for you. Use whichever approach fits your style and the complexity of what you're building.
 
 Kestra is API-first and event-driven, which makes it a natural fit for modern systems. It is also built to scale, with the observability and control you need for everything from simple automations to mission-critical enterprise workflows.
+
+## Install Kestra
+Before you begin, make sure you have Docker installed. Once installed.
+
+1. Linux/macOS:
+```
+curl -o docker-compose.yml \
+https://raw.githubusercontent.com/kestra-io/kestra/develop/docker-compose.yml
+```
+
+3. Windows:
+```
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kestra-io/kestra/develop/docker-compose.yml" -OutFile "docker-compose.yml"
+```
