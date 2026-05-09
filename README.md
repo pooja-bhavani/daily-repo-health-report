@@ -17,9 +17,6 @@ Markdown & HTML dashboard generation
 
 ## Project Strucutre
 
-
-<div align="center">
-
 ```text
                     +----------------------+
                     |   GitHub Repository  |
