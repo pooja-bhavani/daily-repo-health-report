@@ -15,7 +15,7 @@ This project demonstrates how modern workflow orchestration can automate:
 
 Repository analysis
 DevOps maturity checks
-Security scanning
+Security scanning 
 Docker validation
 Infrastructure analysis
 CI/CD inspection
